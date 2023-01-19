@@ -15,22 +15,22 @@ namespace ClassWork
 
             int[] rollTotals = new int[13];
 
-            int TimesThrown = 0;
+            int timesThrown = 0;
 
             //Having the console display the appropriate messages.
             Console.WriteLine("Welcome to the dice throwing simulator!");
             Console.WriteLine();
             Console.Write("How many dice rolls would you like to simulate? ");
-            TimesThrown = Convert.ToInt32(Console.ReadLine());
+            timesThrown = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
             Console.WriteLine("DICE ROLLING SIMULATION RESULTS");
             Console.WriteLine("Each \"*\" represents 1% of the total number of rolls.");           
-            Console.WriteLine("Total number of rolls = " + TimesThrown + ".\n");
+            Console.WriteLine("Total number of rolls = " + timesThrown + ".\n");
            
             rollTotals[0] = r.Next(6);
 
             //Simulate the roll of the die
-            for (int i = 0; i < TimesThrown; i++)
+            for (int i = 0; i < timesThrown; i++)
             {
                 int roll1 = r.Next(1,7);
                 int roll2 = r.Next(1,7);
@@ -43,7 +43,7 @@ namespace ClassWork
             //Print out the results from the array along with the concluding message.
             for (int i = 2; i <= 12; i++)
             {
-                int Percentage = (int)((double)rollTotals[i] / TimesThrown * 100);
+                int Percentage = (int)((double)rollTotals[i] / timesThrown * 100);
                 Console.Write(i + ": ");
 
                 for (int j = 0; j < Percentage; j++)
