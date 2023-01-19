@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Jacob Olsen, Section 3
 namespace ClassWork
 {
     class Program
@@ -16,6 +17,7 @@ namespace ClassWork
 
             int TimesThrown = 0;
 
+            //Having the console display the appropriate messages.
             Console.WriteLine("Welcome to the dice throwing simulator!");
             Console.WriteLine();
             Console.Write("How many dice rolls would you like to simulate? ");
@@ -38,7 +40,7 @@ namespace ClassWork
                 rollTotals[rollTots]++;
             }
 
-            //Print out the results from the array
+            //Print out the results from the array along with the concluding message.
             for (int i = 2; i <= 12; i++)
             {
                 int Percentage = (int)((double)rollTotals[i] / TimesThrown * 100);
